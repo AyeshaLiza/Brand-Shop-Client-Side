@@ -1,0 +1,33 @@
+[
+ {
+  "id" : 1,
+  "image" : "https://i.ibb.co/7gRSwp2/apple3.jpg",
+  "brandName" : "Apple"
+ },
+ {
+  "id" : 2,
+  "image" : "https://i.ibb.co/y8kNNFx/google2.jpg",
+  "brandName" : "Google",
+  "availability" : "Sorry! Products are Currently Unavailable"
+ },
+ {
+  "id" : 3,
+  "image" : "https://i.ibb.co/0FV6sFN/intel2.jpg",
+  "brandName" : "Intel"
+ },
+ {
+  "id" : 4,
+  "image" : "https://i.ibb.co/NLxWTD1/microsoft.jpg",
+  "brandName" : "Microsoft"
+ },
+ {
+  "id" : 5,
+  "image" : "https://i.ibb.co/sJhjhrM/sony.jpg",
+  "brandName" : "Sony"
+},
+ {
+  "id" : 6,
+  "image" : "https://i.ibb.co/ygxy9pY/samsung3.jpg",
+  "brandName" : "Samsung"
+ }
+]
