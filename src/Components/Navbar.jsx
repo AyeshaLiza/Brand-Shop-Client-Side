@@ -4,6 +4,7 @@ import {  Link, NavLink } from "react-router-dom";
 import logo from '../assets/logo.jpg'
 import { useContext } from "react";
 import { AuthContext } from "../Routes/PrivateRoute/AuthProvider";
+import DarkMode from "./DarkMode";
 
 
 const Navbar = () => {
@@ -96,6 +97,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+    <DarkMode></DarkMode>
   {
       user ? <>
        <div>

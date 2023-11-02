@@ -24,11 +24,11 @@ const Signup = () => {
   const handleFormSubmit = e => {
 
     e.preventDefault();
-    const name = e.target.name.value;
+    const displayName  = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const photo = e.target.photo.value;
-    console.log(name, photo, email, password);
+    const photoURL = e.target.photo.value;
+    console.log(displayName , photoURL, email, password);
     setSignupError('')
 
     if (!/(?=.*[A-Z])(?=.*\W)(?!.* ).{6,}/.test(password)) {
@@ -36,8 +36,8 @@ const Signup = () => {
       return
     } 
     else {
-      signUp( email, password).then(result => {
-        const userInfo = (result.user);
+      signUp(displayName, photoURL, email, password).then(result => {
+        // const userInfo = (result.user);
 
         // userInfo.updateProfile({
         //   displayName: name,
@@ -45,7 +45,9 @@ const Signup = () => {
         // })
 
         const createdAt = result.user?.metadata?.creationTime;
-        const user = { email, createdAt: createdAt }
+        const user = { displayName , photoURL, email, createdAt: createdAt }
+        console.log(user);
+
         fetch('http://localhost:4000/user', {
           method: 'POST',
           headers: {
