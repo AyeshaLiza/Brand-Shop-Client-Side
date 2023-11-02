@@ -1,5 +1,6 @@
 import React from 'react';
 import sun from '../assets/sun.png'
+import Moon from '../assets/Moon.png'
 
 
 const DarkMode = () => {
@@ -25,8 +26,9 @@ const DarkMode = () => {
                 onChange={toggleTheme}
             />
             <label className='dark_mode_label' htmlFor='darkmode-toggle'>
-            <div className='w-20 bg-black rounded-2xl'>
+            <div className='w-20 bg-gray-400 rounded-2xl flex gap-2'>
             <img className='w-8' src={sun} alt="" />
+            <img className='w-6' src={Moon} alt="" />
             </div>
                 
                 
