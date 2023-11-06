@@ -10,12 +10,12 @@ const BrandProducts = () => {
   const [productCard, setProductCard] = useState([])
 
   //  const products = useLoaderData()
-  const {id } = useParams();
+  const {id} = useParams();
   // console.log(id);
  
 
   useEffect(()=>{
-    fetch('http://localhost:4000/product')
+    fetch('https://brand-shop-theta.vercel.app/product')
     .then(res => res.json())
     .then(data => {
       setProducts(data)

@@ -2,21 +2,23 @@ import {  Link, NavLink } from "react-router-dom";
 // import { useContext } from "react";
 // import { AuthContext } from "../../../firebase/AuthProvider";
 import logo from '../assets/logo.jpg'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Routes/PrivateRoute/AuthProvider";
-import DarkMode from "./DarkMode";
+import darkMode from '../assets/darkMode.png'
+import { useTheme } from "./Hooks/UseThene";
 
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
-  
+const {changeTheme, mode} = useTheme()
 
-    const handleLogout = () =>{
-      logOut()
-      .then()
-      
-    }
-    
+const handleLogout = () =>{
+  logOut()
+  .then()
+  
+}
+
+
  const navLinks =<>
 <li>
 <NavLink
@@ -38,17 +40,8 @@ const Navbar = () => {
   Add Product
 </NavLink>
 </li>
- 
- <li>
- <NavLink
-  to="/upcomingproduct"
-  className={({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : ""
-  }
->
-  Upcoming Products
-</NavLink>
- </li>
+
+
 
  <li><NavLink
   to="/login"
@@ -88,7 +81,7 @@ const Navbar = () => {
 <div className="mr-5 w-16 h-14">
  <img src={logo} alt="" />
 </div>
-<h1 className="text-3xl font-semibold text-violet-900">technoLiz</h1>         
+<h1 className="text-4xl font-semibold text-sky-500">technoLiz</h1>         
   </div>
   <div className="navbar-center hidden lg:flex">
     
@@ -96,8 +89,9 @@ const Navbar = () => {
    {navLinks}
     </ul>
   </div>
-  <div className="navbar-end">
-    <DarkMode></DarkMode>
+  <div className="navbar-end gap-4">
+    <button onClick={changeTheme} className="w-8"><img src={darkMode} alt="" /></button>
+   
   {
       user ? <>
        <div>

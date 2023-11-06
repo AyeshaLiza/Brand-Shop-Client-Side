@@ -7,7 +7,7 @@ const ProductDetail = () => {
   const [filteredDetail, setFilteredDetail] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    fetch('http://localhost:4000/product')
+    fetch('https://brand-shop-theta.vercel.app/product')
       .then(res => res.json())
       .then(data => {
         setProductDetail(data)

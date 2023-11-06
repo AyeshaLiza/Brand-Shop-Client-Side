@@ -8,15 +8,15 @@ const Login = () => {
 
  const location = useLocation();
   console.log(location);
-    const from = location.state?.from?.pathname || "/";
+    // const from = location.state?.from?.pathname || "/";
 
 const handleLoginForm = e =>{
  
  e.preventDefault();
  const email = e.target.email.value;
  const password = e.target.password.value;
- console.log(email, password);
 setLoginError('')
+
 
  signIn(email, password)
  .then(result =>{
@@ -27,7 +27,7 @@ setLoginError('')
    lastLoggedAt: result.user?.metadata?.lastSignInTime
   }
   
-  fetch('http://localhost:4000/user',{
+  fetch('https://brand-shop-theta.vercel.app/user',{
     method: 'PATCH',
     headers: {
       'content-type': 'application/json'

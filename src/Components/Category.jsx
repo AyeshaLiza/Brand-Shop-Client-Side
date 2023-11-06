@@ -1,11 +1,14 @@
 import React from 'react';
 import images from '../assets/slider/images.jpg'
-
+import bannerx from '../assets/bannerx.webp'
 const Category = () => {
  return (
 
 <div className='mx-auto'>
-<div className="hero" style={{backgroundImage: {images}}}>
+<div className="hero bg-cover"
+ style={{backgroundImage: `url('https://i.ibb.co/rdX70wc/catgBG.jpg')`} }
+>
+  {/* <img  src={bannerx} alt="" /> */}
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-3xl space-y-3 ">

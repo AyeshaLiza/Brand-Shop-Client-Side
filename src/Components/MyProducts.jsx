@@ -5,7 +5,7 @@ const MyProducts = () => {
  const [productCollection, setProductCollection] = useState([]) || []
 
   useEffect(() =>{
-    fetch('http://localhost:4000/product')
+    fetch('https://brand-shop-theta.vercel.app/product')
     .then(res => res.json())
     .then(data =>
       {

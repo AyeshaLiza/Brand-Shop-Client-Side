@@ -19,7 +19,7 @@ const Signup = () => {
   // const [proPicture, setProPicture] = useState({}) || []
   // const [email, setEmail] = useState('') || []
   // const [password, setPassword] = useState('') || []
-  const [sigupError, setSignupError] = useState('') || []
+  const [sigupError, setSignupError] = useState([]) || []
 
   const handleFormSubmit = e => {
 
@@ -37,18 +37,13 @@ const Signup = () => {
     } 
     else {
       signUp(displayName, photoURL, email, password).then(result => {
-        // const userInfo = (result.user);
-
-        // userInfo.updateProfile({
-        //   displayName: name,
-        //       photo: photo
-        // })
+ 
 
         const createdAt = result.user?.metadata?.creationTime;
         const user = { displayName , photoURL, email, createdAt: createdAt }
         console.log(user);
 
-        fetch('http://localhost:4000/user', {
+        fetch('https://brand-shop-theta.vercel.app/user', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -138,6 +133,7 @@ const Signup = () => {
               {
                 sigupError &&
                 <span className='text-red-700'>{sigupError}</span>
+                
                 
               }
 

@@ -7,10 +7,10 @@ import { Outlet } from 'react-router-dom';
 const Root = () => {
  
  return (
-  <div >
-  <div>
+  <div className='dark:bg-zinc-700 dark:text-white'>
+  
    <Navbar></Navbar>
-   </div>
+ 
     <Outlet></Outlet>
     <Footer></Footer>
   </div>
