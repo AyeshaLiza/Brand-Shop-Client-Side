@@ -7,7 +7,7 @@ const ProductDetailCard = ({detail}) => {
   // console.log(cartProduct);
 
  const handleAddtoCart = () => {
-  fetch('https://brand-shop-theta.vercel.app/cart',{
+  fetch('https://server-two-gules.vercel.app/cart',{
     method : 'POST',
     headers: {
       'content-type' : 'application/json'

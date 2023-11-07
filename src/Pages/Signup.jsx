@@ -43,7 +43,7 @@ const Signup = () => {
         const user = { displayName , photoURL, email, createdAt: createdAt }
         console.log(user);
 
-        fetch('https://brand-shop-theta.vercel.app/user', {
+        fetch('https://server-two-gules.vercel.app/user', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

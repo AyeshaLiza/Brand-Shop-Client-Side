@@ -15,7 +15,7 @@ const BrandProducts = () => {
  
 
   useEffect(()=>{
-    fetch('https://brand-shop-theta.vercel.app/product')
+    fetch('https://server-two-gules.vercel.app/product')
     .then(res => res.json())
     .then(data => {
       setProducts(data)

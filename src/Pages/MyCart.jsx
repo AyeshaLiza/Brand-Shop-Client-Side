@@ -7,7 +7,7 @@ const [deleteMyCart, setDeleteMyCart] = useState([]);
 
 
  useEffect(() => {
-  fetch('https://brand-shop-theta.vercel.app/cart')
+  fetch('https://server-two-gules.vercel.app/cart')
   .then(res => res.json())
   .then(data => {
    setMyCart(data)

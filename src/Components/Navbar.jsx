@@ -43,7 +43,7 @@ const handleLogout = () =>{
 
 
 
- <li><NavLink
+ {/* <li><NavLink
   to="/login"
   className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "active" : ""
@@ -51,7 +51,7 @@ const handleLogout = () =>{
 >
   Login
 </NavLink>
-  </li>
+  </li> */}
   
 <li>
 <NavLink

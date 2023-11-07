@@ -27,7 +27,7 @@ setLoginError('')
    lastLoggedAt: result.user?.metadata?.lastSignInTime
   }
   
-  fetch('https://brand-shop-theta.vercel.app/user',{
+  fetch('https://server-two-gules.vercel.app/user',{
     method: 'PATCH',
     headers: {
       'content-type': 'application/json'

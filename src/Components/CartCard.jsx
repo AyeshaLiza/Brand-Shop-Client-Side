@@ -20,7 +20,7 @@ Swal.fire({
 
  if (result.isConfirmed) {
 console.log('deleted');
-  fetch(`https://brand-shop-theta.vercel.app/cart/${_id}`, {
+  fetch(`https://server-two-gules.vercel.app/cart/${_id}`, {
     method: 'DELETE'
   })
   .then(res => res.json())

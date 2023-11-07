@@ -9,7 +9,7 @@ const [loadedProduct, setLoadedProduct] = useState([])
 
   const {id} = useParams();
   useEffect(() =>{
-    fetch(`https://brand-shop-theta.vercel.app/product/${id}`)
+    fetch(`https://server-two-gules.vercel.app/product/${id}`)
     .then(res => res.json())
     .then(data => setLoadedProduct(data))
    }, [])
@@ -32,7 +32,7 @@ const handleUpdateForm = e => {
 
 
   // send to the server
-  fetch(`https://brand-shop-theta.vercel.app/product/${_id}`, {
+  fetch(`https://server-two-gules.vercel.app/product/${_id}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json'

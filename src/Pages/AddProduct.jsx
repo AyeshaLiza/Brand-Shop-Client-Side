@@ -21,7 +21,7 @@ const AddProduct = () => {
     
 
     // send to the server
-    fetch('https://brand-shop-theta.vercel.app/product', {
+    fetch('https://server-two-gules.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
