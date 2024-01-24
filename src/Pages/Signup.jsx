@@ -1,9 +1,8 @@
 import { useContext } from 'react';
-// import { AuthContext } from '../../firebase/AuthProvider';
+
 import { AuthContext } from '../Routes/PrivateRoute/AuthProvider';
 import { useState } from 'react';
 // import login from '../../assets/login.jpg'
-
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { getStorage, uploadBytes } from 'firebase/storage';
@@ -36,11 +35,11 @@ const Signup = () => {
       return
     } 
     else {
-      signUp(displayName, photoURL, email, password).then(result => {
+      signUp(email, password).then(result => {
  
 
         const createdAt = result.user?.metadata?.creationTime;
-        const user = { displayName , photoURL, email, createdAt: createdAt }
+        const user = { email, createdAt: createdAt }
         console.log(user);
 
         fetch('https://server-two-gules.vercel.app/user', {
@@ -66,7 +65,7 @@ const Signup = () => {
 
       })
         .catch((error) => {
-          setSignupError(error)
+          setSignupError(error.error)
         })
 
         // const storageRef = ref(storage, 'email');

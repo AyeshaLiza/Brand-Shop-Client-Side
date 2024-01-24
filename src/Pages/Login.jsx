@@ -51,7 +51,7 @@ const handleGoogle = () => {
 
  return (
   <div>
-   <div className="hero  bg-blue-200">
+   <div className="hero  bg-blue-100">
   
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-blue-300">
       <form onSubmit={handleLoginForm} className="card-body">
